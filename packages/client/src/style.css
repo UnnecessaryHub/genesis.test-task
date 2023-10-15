@@ -1,0 +1,23 @@
+:root {
+  --white: #4c4c4c;
+  --gray: #9b9b9b;
+  --primary: #4f9e99;
+  --secondary: #6cadda;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:  Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
