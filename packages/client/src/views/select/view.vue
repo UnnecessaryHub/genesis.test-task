@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {IOption} from "../../../helpers/interface.ts";
+import {IOption} from "../../../shared/interface.ts";
 import {ref} from "vue";
-import {entityLocales} from "../../../helpers/script.ts";
+import {entityLocales} from "../../shared/script.ts";
 
 
 interface IProps{
@@ -56,16 +56,13 @@ const selectOption = (option:IOption) => {
     width: 100%;
     text-align: left;
     outline: none;
-    height: 47px;
+    height: 37px;
     line-height: 47px;
-
 }
 .my-select .selected {
-    background-color: #212121;
     border-radius: 6px;
     border: 2px solid var(--gray);
-    color: #fff;
-    padding: 0 2em 0 1em;
+    padding: 0 0.7em 0 0.7em;
     cursor: pointer;
     user-select: none;
 }
@@ -80,24 +77,20 @@ const selectOption = (option:IOption) => {
     right: 1em;
     width: 0;
     height: 0;
-    border: 5px solid transparent;
-    border-color: #fff transparent transparent transparent;
 }
 .my-select .items {
-    color: #fff;
     border-radius: 0px 0px 6px 6px;
     overflow: hidden;
     border-right: 1px solid var(--primary);
     border-left: 1px solid var(--primary);
     border-bottom: 1px solid var(--primary);
     position: absolute;
-    background-color: #212121;
+    background: #fff;
     left: 0;
     right: 0;
     z-index: 1;
 }
 .my-select .items div {
-    color: #fff;
     padding-left: 1em;
     cursor: pointer;
     user-select: none;

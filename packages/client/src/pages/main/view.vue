@@ -1,12 +1,12 @@
 <script setup lang="ts" >
-import MyButton from "../../components/ui/MyButton/MyButton.vue";
-import MyTable from "../../components/ui/MyTable/MyTable.vue";
-import MyInput from "../../components/ui/MyInput/MyInput.vue";
-import MyRow from "../../components/ui/Row/MyRow.vue";
-import MySelect from "../../components/ui/MySelect/MySelect.vue";
-import {Entities, IOption} from "../../helpers/interface.ts";
+import MyButton from "../../views/products-button/view.vue";
+import MyTable from "../../views/products-table/view.vue";
+import MyInput from "../../views/products-input/view.vue";
+import MyRow from "../../views/products-row/view.vue";
+import MySelect from "../../views/select/view.vue";
+import {Entities, IOption} from "../../shared/interface.ts";
 import { ref } from 'vue'
-import {useMainStore} from "../../store/main.ts";
+import {useMainStore} from "../../model/pinia.ts";
 
 
 type OptionsValues  =  'notSelected' | Entities;
@@ -61,14 +61,16 @@ const selectedOption = ref<OptionsValues>('notSelected')
 
 <template >
   <div class="container">
+    <v-expand-transition>
       <MyRow gap="24" flexDirection="column">
           <MyRow gap="24" flexDirection="row" alignItems="align-baseline" justifyContent="justify-center">
               <MySelect v-model="selectedOption" :options="options"/>
               <MyInput v-model="name" placeholder="enter name" :disabled="false" label="Name" />
-              <MyButton :disabled="selectedOption === 'notSelected'"  text="Отправить" :loading="isLoading" @click="sentData" />
+              <MyButton :disabled="selectedOption === 'notSelected'"  text="Send" :loading="isLoading" @click="sentData" />
           </MyRow>
           <MyTable :data="mainStore.data" :columns="tableColumns"/>
       </MyRow>
+    </v-expand-transition>
   </div>
 </template>
 

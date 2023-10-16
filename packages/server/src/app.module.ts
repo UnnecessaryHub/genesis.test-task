@@ -1,16 +1,16 @@
 import { HttpModule }          from '@nestjs/axios'
 import { Module }              from '@nestjs/common'
 
-import { AppController }       from './Controllers/app.controller'
-import { AuthController }      from './Controllers/auth.controller'
-import { CompaniesController } from './Controllers/companies.controller'
-import { ContactController }   from './Controllers/contact.controller'
-import { LeadsController }     from './Controllers/leads.controller'
-import { AppService }          from './Services/app.service'
-import { AuthService }         from './Services/auth.service'
-import { CompaniesService }    from './Services/companies.service'
-import { ContactService }      from './Services/contact.service'
-import { LeadsService }        from './Services/leads.service'
+import { AppController }       from './application/app/app.controller'
+import { AuthController }      from './application/auth/auth.controller'
+import { CompaniesController } from './application/companies/companies.controller'
+import { ContactController }   from './application/contact/contact.controller'
+import { LeadsController }     from './application/leads/leads.controller'
+import { AppService }          from './application/app/app.service'
+import { AuthService }         from './application/auth/auth.service'
+import { CompaniesService }    from './application/companies/companies.service'
+import { ContactService }      from './application/contact/contact.service'
+import { LeadsService }        from './application/leads/leads.service'
 
 @Module({
   imports: [HttpModule],

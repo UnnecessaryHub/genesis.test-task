@@ -7,8 +7,8 @@ import { HttpStatus }     from '@nestjs/common'
 import { Post }           from '@nestjs/common'
 import { Observable }     from 'rxjs'
 
-import { ContactService } from '../Services/contact.service'
-import { LeadsService }   from '../Services/leads.service'
+import { ContactService } from '../contact/contact.service'
+import { LeadsService }   from './leads.service'
 
 @Controller('leads')
 export class LeadsController {

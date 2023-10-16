@@ -14,7 +14,7 @@
 <template>
   <div class="my-input-wrapper">
       <input class="my-input" type="text" id="my-input" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" :placeholder="placeholder" :disabled="disabled"/>
-      <label v-if="label" class="my-input-label" for="my-input">{{label}}</label>
+      <label v-if="label" class="my-input-label" for="my-input">Enter ID</label>
   </div>
 </template>
 
@@ -28,12 +28,12 @@
 }
 .my-input{
     font-family: inherit;
-    width: 100%;
+    width: 75%;
     border: 0;
     border-bottom: 2px solid var(--gray);
     outline: 0;
-    font-size: 1.3rem;
-    color: var(--white);
+    font-size: 1.1rem;
+    color: #000000;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;

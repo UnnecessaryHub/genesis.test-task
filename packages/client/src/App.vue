@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import {onMounted} from "vue";
-import {useMainStore} from "./store/main.ts";
-import MainPage from "./pages/MainPage/MainPage.vue";
-import AuthorizePage from "./pages/AuthorizePage/AuthorizePage.vue";
+import {useMainStore} from "./model/pinia.ts";
+import MainPage from "./pages/main/view.vue";
+import AuthorizePage from "./pages/auth/view.vue";
 
 const mainStore = useMainStore();
 onMounted(() =>{

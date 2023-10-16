@@ -23,7 +23,6 @@ const {data,columns} = defineProps<IProps>();
           <td v-for="column in columns" :key="column.key">{{ item[column.key] }}</td>
         </tr>
       </tbody>
-        <span class="no-data" v-else>Empty</span>
     </table>
   </div>
 </template>
@@ -45,15 +44,11 @@ const {data,columns} = defineProps<IProps>();
     font-weight: bold;
     text-align: left;
     border: none;
-    padding: 10px 15px;
+    padding: 6px 6px;
     background: var(--primary);
     font-size: 1.2rem;
-}
-.my-table thead tr th:first-child {
-    border-radius: 8px 0 0 8px;
-}
-.my-table thead tr th:last-child {
-    border-radius: 0 8px 8px 0;
+    border-radius: 0;
+    color: white;
 }
 .my-table tbody td {
     text-align: left;
@@ -61,15 +56,10 @@ const {data,columns} = defineProps<IProps>();
     padding: 10px 15px;
     font-size: 1rem;
     vertical-align: top;
+    border: 1px solid #d7d7d7;
 }
 .my-table tbody tr:nth-child(even){
     background: rgba(179, 57, 215, 0.3);
-}
-.my-table tbody tr td:first-child {
-    border-radius: 8px 0 0 8px;
-}
-.my-table tbody tr td:last-child {
-    border-radius: 0 8px 8px 0;
 }
 
 .my-table-wrapper .no-data{

@@ -8,7 +8,7 @@ import * as process      from 'process'
 import { map }           from 'rxjs'
 import { Observable }    from 'rxjs'
 
-import { AuthService }   from '../Services/auth.service'
+import { AuthService }   from './auth.service'
 
 @Controller('auth')
 export class AuthController {

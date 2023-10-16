@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import LoaderSmIcon from "../../icons/LoaderSmIcon.vue";
+  import LoaderSmIcon from "../loader-icon/loader-icon.vue";
 
   interface Props {
   text:String,
@@ -29,14 +29,16 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         color: white;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 500;
         text-align: center;
-        padding: 13px 25px;
+        padding: 12px 10px;
+        border-radius: 5px;
         background: var(--primary);
         background: linear-gradient(90deg, var(--primary) 20%, var(--secondary) 75%);
         border: none;
         outline: none;
+        width: 80px;
         cursor: pointer;
         transition: background 3s;
     }

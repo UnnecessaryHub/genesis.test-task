@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {useMainStore} from "../../store/main.ts";
+import {useMainStore} from "../../model/pinia.ts";
 import { ref } from 'vue'
-import MyRow from "../../components/ui/Row/MyRow.vue";
-import MyInput from "../../components/ui/MyInput/MyInput.vue";
-import MyButton from "../../components/ui/MyButton/MyButton.vue";
+import MyRow from "../../views/products-row/view.vue";
+import MyInput from "../../views/products-input/view.vue";
+import MyButton from "../../views/products-button/view.vue";
 
 const mainStore = useMainStore()
 const isLoading = ref(false)
@@ -20,10 +20,12 @@ const authorize = async () => {
 <template>
     <div class="authorize-page">
       <div class="container">
-          <MyRow gap="16" flexDirection="row" v-if="!mainStore.isTokenValid" alignItems="align-baseline" justifyContent="justify-center">
+        <v-fade-transition>
+          <MyRow gap="16" flexDirection="row"  v-show="true" v-if="!mainStore.isTokenValid" alignItems="align-baseline" justifyContent="justify-center">
               <MyInput v-model="clientId" placeholder="enter clientId" :disabled="false" label="ID клиента"/>
-              <MyButton :disabled="false"  text="Отправить" :loading="isLoading" @click="authorize" />
+              <MyButton :disabled="false"  text="Send" :loading="isLoading" @click="authorize" />
           </MyRow>
+        </v-fade-transition>
       </div>
     </div>
 </template>

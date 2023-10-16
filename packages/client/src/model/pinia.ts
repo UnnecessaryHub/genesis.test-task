@@ -2,9 +2,9 @@ import axios             from 'axios'
 import jwtDecode         from 'jwt-decode'
 import { defineStore }   from 'pinia'
 
-import { myAxios }       from '../helpers/axiosInstance.ts'
-import { Entities }      from '../helpers/interface.ts'
-import { entityLocales } from '../helpers/script.ts'
+import { myAxios }       from '../shared/http.ts'
+import { Entities }      from '../shared/types.ts'
+import { entityLocales } from '../shared/script.ts'
 
 interface IData {
   id: number

@@ -7,7 +7,7 @@ import { HttpStatus }     from '@nestjs/common'
 import { Post }           from '@nestjs/common'
 import { Observable }     from 'rxjs'
 
-import { ContactService } from '../Services/contact.service'
+import { ContactService } from './contact.service'
 
 @Controller('contacts')
 export class ContactController {
