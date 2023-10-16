@@ -31,7 +31,7 @@ export class AuthController {
       throw new HttpException(
         {
           status: HttpStatus.FORBIDDEN,
-          error: 'Wrong client id'
+          error: 'Wrong frontend id'
         },
         HttpStatus.FORBIDDEN,
         {
